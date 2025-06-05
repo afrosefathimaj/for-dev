@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For Dev 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      color: #fff0f5;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 5px;
+      color: #ffd1dc;
+      position: relative;
+      z-index: 2;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 15px auto;
+      max-width: 600px;
+      white-space: pre-line;
+      position: relative;
+      z-index: 2;
+    }
+
+    .slider {
+      max-width: 50%;
+      height: 700px;
+      margin: 7px auto;
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(255,255,255,0.2);
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+      position: relative;
+      opacity: 1;
+    }
+
+    button {
+      background: #ff66b2;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(255,102,178,0.5);
+      margin-top: 30px;
+      transition: background 0.3s ease;
+      z-index: 2;
+      position: relative;
+    }
+
+    button:hover {
+      background: #ff85c1;
+    }
+
+    .hidden-message {
+      display: none;
+      font-size: 1.4rem;
+      margin-top: 30px;
+      color: #ffccff;
+      font-weight: bold;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-line;
+      animation: fadeIn 2s ease forwards;
+      z-index: 2;
+      position: relative;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Twinkling Stars */
+    .stars, .twinkling {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .stars {
+      background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/img/stars.png') repeat;
+      animation: moveStars 200s linear infinite;
+    }
+
+    .twinkling {
+      background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/img/twinkling.png') repeat;
+      animation: moveTwinkling 100s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from {background-position: 0 0;}
+      to {background-position: -10000px 5000px;}
+    }
+
+    @keyframes moveTwinkling {
+      from {background-position: 0 0;}
+      to {background-position: 10000px -5000px;}
+    }
+
+    /* Fireflies */
+    .firefly {
+      position: fixed;
+      background: #ffff99;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      opacity: 0;
+      box-shadow: 0 0 8px 2px #ffff99;
+      animation: blink 2s infinite alternate, fly 15s linear infinite;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes fly {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(500px, -300px) rotate(720deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background layers -->
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+
+  <!-- Fireflies -->
+  <script>
+    for (let i = 0; i < 10; i++) {
+      const firefly = document.createElement('div');
+      firefly.className = 'firefly';
+      firefly.style.top = Math.random() * 100 + 'vh';
+      firefly.style.left = Math.random() * 100 + 'vw';
+      firefly.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(firefly);
+    }
+  </script>
+
+  <!-- Main content -->
+  <h1>Hey Babe 💖</h1>
+
+  <div class="slider">
+    <img src="handsome.jpg" alt="handsome" class="slide active" />
+    <img src="mylove.jpg" alt="my love" class="slide" />
+    <img src="babe.jpg" alt="babe" class="slide" />
+    <img src="fam.jpg" alt="fam" class="slide" />
+    <img src="kissy.jpg" alt="kissy" class="slide" />
+    <img src="pattuma.jpg" alt="pattuma" class="slide" />
+
+  </div>
+
+  <p>
+    Hey Handsome,
+
+    You know, they say love is a wild ride, and ours has been nothing short of exciting! 🚀 From our passionate moments to those fiery debates, every twist and turn just makes me want you even more. Honestly, I wouldn’t want to share this adventure with anyone else but you.
+
+    I love how you embrace the idea of my little Zayan. Just imagining you as the perfect partner and “dad” figure in our little dream world makes my heart race! 🥵 The thought of you two having fun together is such a turn-on.
+
+    Sure, we’ve had our share of “discussions” / fights, but let’s be real—those just add spice to our relationship! 🔥 Who else would I want to argue with over who gets the last cookie or who picks the movie? 🍪🎬 And let’s not forget how much I enjoy making up after those little spats… if you know what I mean. 😉
+
+    So here’s to us—my favorite duo! Let’s keep dreaming, laughing, and turning up the heat. Because at the end of the day, you’re the one I want to tease and tempt for the rest of my life. 😘
+
+    Love you to the moon and back (and maybe even to Mars)! 🌙❤️
+
+    Forever yours and always craving you,  
+    AFROSE DEV
+  </p>
+
+  <button id="surpriseBtn">Tap me for a surprise!</button>
+
+  <p class="hidden-message" id="secretMessage">
+    💌 Here’s a little secret:  
+    You, me, and Zayan — the perfect team.  
+    Can’t wait for all our wild adventures ahead! 🚀❤️
+  </p>
+
+  <!-- Script -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    setInterval(nextSlide, 4000);
+
+    const btn = document.getElementById('surpriseBtn');
+    const secret = document.getElementById('secretMessage');
+    const music = document.getElementById('bgMusic');
+
+    btn.addEventListener('click', () => {
+      secret.style.display = 'block';
+      btn.style.display = 'none';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+      music.volume = 0.3;
+      music.play().catch(e => {
+        alert("Please tap anywhere to allow music playback");
+        console.log("Audio play prevented:", e);
+      });
+    });
+
+    document.body.addEventListener('click', () => {
+      if (music.paused) {
+        music.play().catch(() => {});
+      }
+    }, { once: true });
+  </script>
+</body>
+</html>
