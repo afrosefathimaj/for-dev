@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For Dev 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffe6f0;
+      color: #330033;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin: 15px auto;
+      max-width: 600px;
+      white-space: pre-line;
+    }
+    /* Slider container */
+    .slider {
+      max-width: 90%;
+      max-height: 300px;
+      margin: 15px auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(51,0,51,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .slider img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slider img.active {
+      opacity: 1;
+      position: relative;
+    }
+    button {
+      background: #cc3399;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(204,51,153,0.4);
+      margin-top: 30px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #e65caa;
+    }
+    .hidden-message {
+      display: none;
+      font-size: 1.4rem;
+      margin-top: 30px;
+      color: #660066;
+      font-weight: bold;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-line;
+    }
+    /* Audio player styling */
+    audio {
+      margin-top: 20px;
+      outline: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hey Dev 💖</h1>
+  
+  <div class="slider">
+    <img src="C:/Users/Afrose/OneDrive/Desktop/my love/handsome.jpg" alt="handsome" class="active" />
+    <img src="C:/Users/Afrose/OneDrive/Desktop/my love/my love.jpg" alt="my love" />
+  </div>
+
+  <!-- Background Music -->
+  <audio controls autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2021/10/11/audio_47b6b7cc60.mp3?filename=romantic-ukulele-5428.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <p>
+    Hey Handsome,
+
+    You know, they say love is a wild ride, and ours has been nothing short of exciting! 🚀 From our passionate moments to those fiery debates, every twist and turn just makes me want you even more. Honestly, I wouldn’t want to share this adventure with anyone else but you.
+
+    I love how you embrace the idea of my little Zayan. Just imagining you as the perfect partner and “dad” figure in our little dream world makes my heart race! 🥵 The thought of you two having fun together is such a turn-on.
+
+    Sure, we’ve had our share of “discussions” (a.k.a. fights), but let’s be real—those just add spice to our relationship! 🔥 Who else would I want to argue with over who gets the last cookie or who picks the movie? 🍪🎬 And let’s not forget how much I enjoy making up after those little spats… if you know what I mean. 😉
+
+    So here’s to us—my favorite duo! Let’s keep dreaming, laughing, and turning up the heat. Because at the end of the day, you’re the one I want to tease and tempt for the rest of my life. 😘
+
+    Love you to the moon and back (and maybe even to Mars)! 🌙❤️
+
+    Forever yours and always craving you,  
+    AFROSE DEV
+  </p>
+
+  <button id="surpriseBtn">Tap me for a surprise!</button>
+
+  <p class="hidden-message" id="secretMessage">
+    💌 Here’s a little secret:  
+    You, me, and Zayan — the perfect team.  
+    Can’t wait for all our wild adventures ahead! 🚀❤️
+  </p>
+
+  <script>
+    // Slider JavaScript
+    const slides = document.querySelectorAll('.slider img');
+    let currentIndex = 0;
+
+    function showNextSlide() {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 4000); // Change slide every 4 seconds
+
+    // Surprise button
+    const btn = document.getElementById('surpriseBtn');
+    const secret = document.getElementById('secretMessage');
+
+    btn.addEventListener('click', () => {
+      secret.style.display = 'block';
+      btn.style.display = 'none';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
